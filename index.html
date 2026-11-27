@@ -3,37 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abhi's Tata Safari | Munnar Road Trip 2026</title>
+
+<title>Abhi's Tata Safari | Munnar Trip 2026</title>
 
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#f1f6f1;color:#24352b;font:16px/1.65 Arial,sans-serif}
-header{background:linear-gradient(135deg,#10452f,#4b9565);color:white;text-align:center;padding:35px 16px}
-header h1{font-size:clamp(28px,5vw,42px);margin:0}
-header p{margin:7px}
-main{max-width:1050px;margin:auto;padding:15px}
-.card{background:white;border:1px solid #d9e6dc;border-radius:15px;padding:20px;margin:18px 0;box-shadow:0 4px 14px #0000000b}
-h2{color:#17633f;margin-top:0}
-h3{color:#28764c}
-.day{border-top:2px solid #e0e9e2;padding-top:18px;margin-top:20px}
-.date{background:#e6f3e9;color:#17633f;padding:5px 10px;border-radius:7px;font-weight:bold}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
-th,td{border-bottom:1px solid #dce5de;padding:10px;text-align:left;vertical-align:top}
-th{background:#eaf4ec;color:#17633f}
-.time{font-weight:bold;white-space:nowrap}
-.map{display:inline-block;background:#17633f;color:white!important;text-decoration:none;padding:7px 11px;border-radius:7px;margin:3px;font-size:13px}
-.map:hover{background:#32835a}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.spot{background:#f9fcf9;border:1px solid #dce8df;border-radius:10px;padding:14px}
-.food{background:#fff9ed;border:1px solid #f0dfbd;border-radius:10px;padding:13px;margin:12px 0}
-.warning{background:#fff0d9;border-left:5px solid #e0a22c;padding:15px;border-radius:8px;margin:15px 0}
-.danger{background:#fff0ef;border-left-color:#b5443c}
-.small{font-size:13px;color:#637268}
-footer{background:#10452f;color:white;text-align:center;padding:22px;border-radius:12px}
-@media(max-width:650px){
-main{padding:8px}.card{padding:14px}
-table{font-size:12px}th,td{padding:7px}
-.time{white-space:normal}
+:root {
+  --green: #174e38;
+  --lightgreen: #eaf4ec;
+  --orange: #d97706;
+  --dark: #25352b;
+  --muted: #65756a;
+  --border: #dce7df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f6f2;
+  color: var(--dark);
+  line-height: 1.65;
+}
+
+header {
+  background: linear-gradient(135deg, #103c2b, #43885d);
+  color: white;
+  padding: 38px 18px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0;
+}
+
+header p {
+  margin: 7px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 12px;
+  margin: 4px;
+  border: 1px solid #ffffff70;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  margin: 20px 0;
+  box-shadow: 0 5px 18px #0000000a;
+}
+
+h2 {
+  color: var(--green);
+  margin-top: 0;
+}
+
+h3 {
+  color: #28764c;
+}
+
+h4 {
+  margin-bottom: 5px;
+}
+
+.day {
+  border-top: 2px solid var(--border);
+  padding-top: 20px;
+  margin-top: 22px;
+}
+
+.day:first-of-type {
+  border-top: 0;
+}
+
+.date {
+  display: inline-block;
+  background: var(--lightgreen);
+  color: var(--green);
+  padding: 5px 11px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.spot {
+  background: #fbfdfb;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.spot h3 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 14px;
+}
+
+th, td {
+  border-bottom: 1px solid var(--border);
+  padding: 11px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--lightgreen);
+  color: var(--green);
+}
+
+.time {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.map {
+  display: inline-block;
+  background: var(--green);
+  color: white !important;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 4px 2px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.map:hover {
+  background: #31865a;
+}
+
+.food {
+  background: #fff9ed;
+  border: 1px solid #f0dfbd;
+  border-radius: 11px;
+  padding: 15px;
+  margin: 13px 0;
+}
+
+.warning {
+  background: #fff2d9;
+  border-left: 5px solid #e0a22c;
+  border-radius: 9px;
+  padding: 16px;
+  margin: 15px 0;
+}
+
+.danger {
+  background: #fff0ef;
+  border-left-color: #b5443c;
+}
+
+.step {
+  background: #eaf4ec;
+  border-radius: 10px;
+  padding: 13px;
+  margin: 12px 0;
+}
+
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.checklist {
+  line-height: 2.1;
+}
+
+footer {
+  background: var(--green);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+@media(max-width:650px) {
+  main {
+    padding: 8px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 7px;
+  }
+
+  .time {
+    white-space: normal;
+  }
 }
 </style>
 </head>
@@ -41,480 +229,1272 @@ table{font-size:12px}th,td{padding:7px}
 <body>
 
 <header>
-<h1>🌿 Munnar Road Trip 2026 🚙</h1>
-<p><b>Abhi's Tata Safari · 5 Friends</b></p>
-<p>Hyderabad → Bengaluru → Coimbatore → Munnar</p>
-<p>December 24–30, 2026</p>
-<p>Pin-to-pin itinerary · Food stops · Rest halts · Google Maps</p>
+  <h1>🌿 Munnar Trip 2026 🚙</h1>
+  <p><b>Abhi's Tata Safari · 5 Friends · Non-Veg Food Trip</b></p>
+  <p>Hyderabad → Bengaluru → Coimbatore → Munnar</p>
+  <p>December 24 – December 30, 2026</p>
+
+  <span class="badge">Detailed Road Plan</span>
+  <span class="badge">Food & Rest Stops</span>
+  <span class="badge">Google Maps Pins</span>
 </header>
 
 <main>
 
+<!-- TRIP SUMMARY -->
+
 <section class="card">
-<h2>Trip Details</h2>
+  <h2>Our Trip at a Glance</h2>
 
-<div class="grid">
-<div class="spot"><b>Departure</b><br>Hyderabad<br>Dec 24, 2026 · 5:00 PM</div>
-<div class="spot"><b>Vehicle</b><br>Abhi's Tata Safari</div>
-<div class="spot"><b>Travellers</b><br>5 Friends</div>
-<div class="spot"><b>Main destination</b><br>Munnar, Kerala</div>
-<div class="spot"><b>Munnar stay</b><br>Dec 26, 27 & 28</div>
-<div class="spot"><b>Return target</b><br>Hyderabad · Dec 30 · 12:30 PM</div>
-</div>
+  <div class="grid">
+    <div class="spot">
+      <b>Departure</b><br>
+      Hyderabad<br>
+      Thu, Dec 24 · 5:00 PM
+    </div>
 
-<p><b>Trip style:</b> Road trip with Bengaluru and Coimbatore as route halts. Munnar is our only holiday destination. Ooty and Wayanad are excluded.</p>
+    <div class="spot">
+      <b>Vehicle</b><br>
+      Abhi's Tata Safari
+    </div>
 
-<p class="small">All times are planning estimates. Christmas traffic, weather, road conditions, queues and restaurant timings can change the schedule. Use live Google Maps navigation on the travel day.</p>
+    <div class="spot">
+      <b>Travellers</b><br>
+      5 Friends
+    </div>
 
-<div class="warning danger">
-<b>Important return timing:</b> Munnar to Bengaluru is a long drive, and Bengaluru to Hyderabad is another long drive. Reaching Hyderabad by Dec 30 at 12:30 PM after the Dec 29 drive is not a safe, realistic promise. Please adjust the return time or trip dates. Never drive sleepy, speed, or skip rest to meet a deadline.
-</div>
+    <div class="spot">
+      <b>Main Destination</b><br>
+      Munnar, Kerala
+    </div>
+
+    <div class="spot">
+      <b>Munnar Stay</b><br>
+      Dec 26, 27 & 28
+    </div>
+
+    <div class="spot">
+      <b>Return Target</b><br>
+      Hyderabad · Dec 30 · 12:30 PM
+    </div>
+  </div>
+
+  <p>
+    Bengaluru and Coimbatore are route halts and overnight stays.
+    Munnar is our only holiday destination.
+    Ooty and Wayanad are not included.
+  </p>
+
+  <p class="small">
+    All timings are planning estimates. Christmas traffic, road conditions,
+    weather, restaurant queues and hill-road delays can change the schedule.
+    Use live Google Maps navigation on the travel day.
+  </p>
+
+  <div class="warning danger">
+    <b>Return deadline reality:</b>
+    Munnar to Bengaluru is a long drive, and Bengaluru to Hyderabad
+    is another long drive. Reaching Hyderabad by Dec 30 at 12:30 PM
+    after the Dec 29 drive is not a safe, realistic promise.
+    We should change the return time or trip dates rather than rush,
+    speed or drive without sleep.
+  </div>
 </section>
 
+<!-- HOW TO FOLLOW -->
+
 <section class="card">
-<h2>Complete Route Maps</h2>
+  <h2>How to Follow This Website</h2>
 
-<div class="grid">
-<div class="spot">
-<h3>Hyderabad → Bengaluru</h3>
-<p>NH44 via Kurnool and Anantapur.</p>
-<a class="map" target="_blank" href="https://www.google.com/maps/dir/Hyderabad/Kurnool/Anantapur/Bengaluru/">Open Route</a>
-</div>
+  <div class="step">
+    <b>Step 1:</b> Open the current day's section.
+  </div>
 
-<div class="spot">
-<h3>Bengaluru → Coimbatore</h3>
-<p>Hosur → Krishnagiri → Salem → Coimbatore.</p>
-<a class="map" target="_blank" href="https://www.google.com/maps/dir/Bengaluru/Hosur/Krishnagiri/Salem/Coimbatore/">Open Route</a>
-</div>
+  <div class="step">
+    <b>Step 2:</b> Follow the stops in the listed order.
+  </div>
 
-<div class="spot">
-<h3>Coimbatore → Munnar Scenic Route</h3>
-<p>Pollachi → Udumalpet → Chinnar → Marayoor → Lakkam → Munnar.</p>
-<a class="map" target="_blank" href="https://www.google.com/maps/dir/Coimbatore/Pollachi/Udumalpet/Chinnar/Marayoor/Lakkam+Waterfalls/Munnar/">Open Scenic Route</a>
-</div>
+  <div class="step">
+    <b>Step 3:</b> Tap the green Maps button beside the location.
+  </div>
 
-<div class="spot">
-<h3>Munnar → Bengaluru</h3>
-<p>Marayoor → Udumalpet → Coimbatore → Salem → Bengaluru.</p>
-<a class="map" target="_blank" href="https://www.google.com/maps/dir/Munnar/Marayoor/Udumalpet/Coimbatore/Salem/Bengaluru/">Open Return Route</a>
-</div>
-</div>
+  <div class="step">
+    <b>Step 4:</b> In Google Maps, tap Directions and Start.
+  </div>
+
+  <div class="step">
+    <b>Step 5:</b> At food stops, choose the recommended restaurant
+    or use the backup Maps search.
+  </div>
+
+  <div class="step">
+    <b>Step 6:</b> If we are late, skip optional sightseeing.
+    Never skip driver rest.
+  </div>
+
+  <a class="map"
+     target="_blank"
+     href="https://www.google.com/maps/dir/Hyderabad/Kurnool/Anantapur/Bengaluru/Coimbatore/Pollachi/Udumalpet/Marayoor/Munnar/">
+     Open Full Trip Route
+  </a>
 </section>
 
 <!-- DAY 1 -->
+
 <section class="card">
-<h2>Day 1 · Thursday, December 24</h2>
-<p><span class="date">Hyderabad → Bengaluru · Start 5:00 PM</span></p>
-<p>Approximate distance: 570 km. Overnight highway journey. Driver rotation and proper rest are essential.</p>
+  <h2>Day 1 · Thursday, December 24</h2>
+  <p>
+    <span class="date">Hyderabad → Bengaluru</span>
+  </p>
 
-<table>
-<tr><th>Time</th><th>Location / Halt</th><th>Plan</th><th>Maps</th></tr>
-<tr>
-<td class="time">5:00 PM</td>
-<td>Hyderabad departure</td>
-<td>Fuel, FASTag, tyre check, water and snacks. Start exactly at 5 PM.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/fuel+stations+Hyderabad+ORR/">Fuel</a></td>
-</tr>
-<tr>
-<td class="time">7:15–7:40 PM</td>
-<td>Jadcherla / NH44</td>
-<td>Tea, washroom and 20-minute stretch break.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/restaurants+fuel+Jadcherla+NH44/">Halt</a></td>
-</tr>
-<tr>
-<td class="time">9:30–10:15 PM</td>
-<td>Kurnool bypass</td>
-<td>Dinner and fuel if required. Choose a well-lit restaurant with parking.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/family+restaurants+Kurnool+bypass/">Dinner</a></td>
-</tr>
-<tr>
-<td class="time">11:45 PM–12:05 AM</td>
-<td>Anantapur / NH44</td>
-<td>Driver change, tea and quick rest. Never stop on the highway shoulder.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/restaurants+Anantapur+NH44/">Rest Stop</a></td>
-</tr>
-<tr>
-<td class="time">Approx. 2:30–4:00 AM</td>
-<td>Bengaluru hotel</td>
-<td>Check in only with confirmed late-night arrival. Sleep after reaching.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/hotels+parking+Electronic+City+Bengaluru/">Hotel Area</a></td>
-</tr>
-</table>
+  <p>
+    Start exactly at <b>5:00 PM</b>.
+    Approximate road distance is around 570 km.
+    This is an overnight highway journey, so driver rotation and rest
+    are important.
+  </p>
 
-<div class="food">
-<b>Day 1 food plan:</b> Dinner at Kurnool bypass or another open highway restaurant. Carry drinking water, fruit and light snacks. Confirm late-night kitchen hours before relying on any outlet.
-</div>
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Stop / Location</th>
+      <th>What We Do</th>
+      <th>Maps</th>
+    </tr>
+
+    <tr>
+      <td class="time">5:00 PM</td>
+      <td><b>Hyderabad Start</b></td>
+      <td>
+        Fuel, FASTag, tyre check, water and snacks.
+        Set driver and navigator.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/fuel+stations+Hyderabad+ORR/">
+           Fuel Search
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">7:15–7:40 PM</td>
+      <td><b>Jadcherla / NH44</b></td>
+      <td>
+        Tea, washroom and 20-minute stretch break.
+        Park only at a safe service area.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/restaurants+fuel+Jadcherla+NH44/">
+           Jadcherla Halt
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">9:30–10:15 PM</td>
+      <td><b>Kurnool Bypass</b></td>
+      <td>
+        Main dinner stop. Prefer a family restaurant with parking
+        and clean washrooms.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/non+veg+restaurants+Kurnool+bypass/">
+           Non-Veg Dinner
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">11:45 PM–12:15 AM</td>
+      <td><b>Anantapur / NH44</b></td>
+      <td>
+        Driver change, tea and short rest.
+        Do not stop on the highway shoulder.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/restaurants+Anantapur+NH44/">
+           Anantapur Halt
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">Approx. 2:30–4:00 AM</td>
+      <td><b>Bengaluru Hotel</b></td>
+      <td>
+        Check in only with confirmed late-night arrival.
+        Sleep after reaching; no sightseeing today.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/hotels+parking+Electronic+City+Bengaluru/">
+           Hotel Area
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="food">
+    <h3>Day 1 Food Plan 🍗</h3>
+
+    <b>Kurnool dinner:</b>
+    Order chicken biryani, mutton biryani, chicken fry,
+    kebabs or a proper non-veg meals plate depending on the outlet.
+
+    <p>
+      Keep packed water, bananas, biscuits and light snacks in the car.
+      Confirm late-night restaurant kitchens before relying on a specific outlet.
+    </p>
+  </div>
 </section>
 
 <!-- DAY 2 -->
+
 <section class="card">
-<h2>Day 2 · Friday, December 25</h2>
-<p><span class="date">Bengaluru → Coimbatore</span></p>
-<p>Recovery morning after the overnight journey. Do not leave Bengaluru early if drivers have not slept.</p>
+  <h2>Day 2 · Friday, December 25</h2>
 
-<table>
-<tr><th>Time</th><th>Location / Halt</th><th>Plan & Food</th><th>Maps</th></tr>
-<tr>
-<td class="time">8:30–9:30 AM</td>
-<td>Bengaluru hotel</td>
-<td>Breakfast, check out and hydrate after proper sleep.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/breakfast+Electronic+City+Bengaluru/">Breakfast</a></td>
-</tr>
-<tr>
-<td class="time">10:30–11:15 AM</td>
-<td>Hosur / Bommasandra</td>
-<td>Coffee or restroom break. A2B is a vegetarian tiffin option: dosa, pongal, idli and coffee.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/A2B+Bommasandra+Hosur+Road/">A2B</a></td>
-</tr>
-<tr>
-<td class="time">12:15–12:45 PM</td>
-<td>Shoolagiri / Krishnagiri</td>
-<td>Short break. Use a restaurant with safe parking and clean washrooms.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/restaurants+Shoolagiri+NH44/">Food Halt</a></td>
-</tr>
-<tr>
-<td class="time">2:00–3:00 PM</td>
-<td>Salem / Omalur</td>
-<td>Lunch, fuel and driver rest. Try Tamil meals, dosa or biryani at a suitable highway restaurant.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/highway+restaurants+Omalur+Salem/">Lunch</a></td>
-</tr>
-<tr>
-<td class="time">4:30–5:15 PM</td>
-<td>Coimbatore bypass</td>
-<td>Tea and stretch break. Avoid unnecessary city-centre traffic.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/restaurants+Coimbatore+L%26T+Bypass/">Tea Halt</a></td>
-</tr>
-<tr>
-<td class="time">5:30–7:00 PM</td>
-<td>Coimbatore hotel</td>
-<td>Check in, park the car and relax. Overnight stay.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/budget+hotels+parking+Coimbatore+Avinashi+Road/">Stay Area</a></td>
-</tr>
-</table>
+  <p>
+    <span class="date">Bengaluru → Coimbatore</span>
+  </p>
 
-<div class="food">
-<b>Coimbatore special food:</b> Kongu-style mutton biryani, mutton chukka, Pallipalayam chicken, kola urundai, kari dosa and fish fry.
-<br><br>
-<b>Restaurant options to check:</b> Valarmathi Kongunaatu Samayal and Haribhavanam. Christmas crowd and branch timings may vary.
-<br>
-<a class="map" target="_blank" href="https://www.google.com/maps/search/Valarmathi+Kongunaatu+Samayal+Coimbatore/">Valarmathi Maps</a>
-<a class="map" target="_blank" href="https://www.google.com/maps/search/Haribhavanam+Coimbatore/">Haribhavanam Maps</a>
-</div>
+  <p>
+    Recovery morning after the overnight journey.
+    Do not start driving until everyone has rested properly.
+  </p>
+
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Stop / Location</th>
+      <th>Plan & Food</th>
+      <th>Maps</th>
+    </tr>
+
+    <tr>
+      <td class="time">8:30–9:30 AM</td>
+      <td><b>Bengaluru Hotel</b></td>
+      <td>
+        Breakfast, check out and hydrate.
+        Start only after the driver has slept.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/breakfast+Electronic+City+Bengaluru/">
+           Breakfast
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">10:30–11:15 AM</td>
+      <td><b>Hosur / Bommasandra</b></td>
+      <td>
+        Coffee and washroom break.
+        Vegetarian tiffin is convenient for a quick highway breakfast.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/A2B+Bommasandra+Hosur+Road/">
+           A2B Search
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">12:15–12:45 PM</td>
+      <td><b>Shoolagiri / Krishnagiri</b></td>
+      <td>
+        Short rest. Use a clean restaurant with safe parking.
+        Don't take a long city detour.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/restaurants+Shoolagiri+NH44/">
+           Food Halt
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">2:00–3:00 PM</td>
+      <td><b>Salem / Omalur</b></td>
+      <td>
+        Lunch, fuel and driver rest.
+        Try Tamil meals, chicken biryani or a highway non-veg restaurant.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/non+veg+restaurants+Omalur+Salem/">
+           Non-Veg Lunch
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">4:30–5:15 PM</td>
+      <td><b>Coimbatore Bypass</b></td>
+      <td>
+        Tea, stretch and traffic check.
+        Avoid unnecessary city-centre driving.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/restaurants+Coimbatore+L%26T+Bypass/">
+           Tea Halt
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">5:30–7:00 PM</td>
+      <td><b>Coimbatore Hotel</b></td>
+      <td>
+        Check in, park the car and relax.
+        Overnight stay.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/hotels+parking+Coimbatore+Avinashi+Road/">
+           Hotel Area
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="food">
+    <h3>Coimbatore – Must-Try Non-Veg 🍖</h3>
+
+    <p>
+      Coimbatore is known for Kongu-style flavours.
+      These are our food priorities:
+    </p>
+
+    <ul>
+      <li>Kongu-style mutton biryani</li>
+      <li>Mutton chukka / mutton fry</li>
+      <li>Pallipalayam chicken</li>
+      <li>Kola urundai</li>
+      <li>Kari dosa</li>
+      <li>Fish fry and chicken pepper fry</li>
+    </ul>
+
+    <b>Primary restaurant:</b> Valarmathi Mess – Race Course.
+
+    <br>
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Valarmathi+Mess+Race+Course+Coimbatore/">
+       Valarmathi Mess
+    </a>
+
+    <p>
+      <b>Backup:</b> Haribhavanam – Coimbatore.
+      Popular for South Indian non-veg dishes and biryani.
+    </p>
+
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Haribhavanam+Coimbatore/">
+       Haribhavanam
+    </a>
+
+    <p class="small">
+      Christmas dinner may be crowded. Check the branch and kitchen hours
+      before leaving the hotel.
+    </p>
+  </div>
 </section>
 
 <!-- DAY 3 -->
+
 <section class="card">
-<h2>Day 3 · Saturday, December 26</h2>
-<p><span class="date">Coimbatore → Pollachi → Udumalpet → Chinnar → Marayoor → Munnar</span></p>
-<p>Approx. 150–180 km depending on stops. Scenic route; plan to reach Munnar before dark.</p>
+  <h2>Day 3 · Saturday, December 26</h2>
 
-<table>
-<tr><th>Time</th><th>Location</th><th>Plan / Food</th><th>Maps</th></tr>
-<tr>
-<td class="time">7:00–8:00 AM</td>
-<td>Coimbatore hotel</td>
-<td>Breakfast, check out, fuel and water.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/breakfast+Coimbatore+bypass/">Breakfast</a></td>
-</tr>
-<tr>
-<td class="time">9:00–9:30 AM</td>
-<td>Pollachi</td>
-<td>Short town halt, coffee or local tiffin.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Hotel+Gowri+Krishna+Pollachi/">Gowri Krishna</a></td>
-</tr>
-<tr>
-<td class="time">10:00–10:30 AM</td>
-<td>Pollachi–Udumalpet road</td>
-<td>Optional snack and washroom stop.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/restaurants+Pollachi+Udumalpet+Road/">Food Stops</a></td>
-</tr>
-<tr>
-<td class="time">11:30 AM–12:15 PM</td>
-<td>Udumalpet</td>
-<td>Early lunch, fuel and restroom. This is the last major service town before the forest route.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/restaurants+fuel+Udumalpet/">Udumalpet</a></td>
-</tr>
-<tr>
-<td class="time">1:15–1:45 PM</td>
-<td>Chinnar Wildlife Sanctuary</td>
-<td>Scenic approach. Stop only at permitted, safe locations. Follow forest/checkpost instructions.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Chinnar+Wildlife+Sanctuary/">Chinnar</a></td>
-</tr>
-<tr>
-<td class="time">2:15–2:45 PM</td>
-<td>Marayoor</td>
-<td>Short village stop, scenic views and local shops if open.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Marayoor+Kerala/">Marayoor</a></td>
-</tr>
-<tr>
-<td class="time">3:00–3:30 PM</td>
-<td>Lakkam Waterfalls</td>
-<td>Optional short visit if access, weather, parking and daylight permit.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Lakkam+Waterfalls+Munnar/">Lakkam Falls</a></td>
-</tr>
-<tr>
-<td class="time">4:30–6:00 PM</td>
-<td>Munnar accommodation</td>
-<td>Check in, settle down and relax. Avoid late-night hill driving.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/homestays+parking+Anachal+Munnar/">Stay Area</a></td>
-</tr>
-</table>
+  <p>
+    <span class="date">Coimbatore → Pollachi → Aliyar → Udumalpet → Chinnar → Marayoor → Munnar</span>
+  </p>
 
-<div class="food">
-<b>Food halt:</b> Eat a proper lunch in Udumalpet before the forest section. For dinner in Munnar, try appam and stew, Kerala parotta, puttu-kadala, fish curry or biryani.
-</div>
+  <p>
+    This is our scenic drive day.
+    The Coimbatore–Munnar route through Pollachi, Udumalpet,
+    Chinnar and Marayoor is approximately 160–170 km before
+    sightseeing detours. Allow a full day with stops.
+  </p>
 
-<a class="map" target="_blank" href="https://www.google.com/maps/dir/Coimbatore/Pollachi/Udumalpet/Chinnar/Marayoor/Lakkam+Waterfalls/Munnar/">All Day 3 Stops</a>
+  <div class="warning">
+    <b>Route rule:</b>
+    Fuel and have a proper meal in Pollachi or Udumalpet.
+    Forest and hill sections have fewer convenient services.
+    Cross the Chinnar/Marayoor stretch in daylight.
+  </div>
+
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Stop / Location</th>
+      <th>What We Do</th>
+      <th>Maps</th>
+    </tr>
+
+    <tr>
+      <td class="time">7:00–8:00 AM</td>
+      <td><b>Coimbatore Hotel</b></td>
+      <td>
+        Breakfast, check out, fuel and water.
+        Start the scenic route.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/breakfast+Coimbatore+bypass/">
+           Breakfast
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">9:00–9:45 AM</td>
+      <td><b>Pollachi Town</b></td>
+      <td>
+        Coffee, tender coconut and short town stop.
+        Pollachi is known for coconut groves and countryside views.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/tender+coconut+stalls+Pollachi/">
+           Pollachi Stop
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">9:45–10:45 AM</td>
+      <td><b>Pollachi Non-Veg Food Stop</b></td>
+      <td>
+        If hungry, try local biryani or seafood.
+        Keep this stop short because the forest route is ahead.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/non+veg+restaurants+Pollachi/">
+           Non-Veg Search
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">Optional · 11:00 AM</td>
+      <td><b>Aliyar Dam</b></td>
+      <td>
+        Optional scenic detour from the main route.
+        Visit only if time, access and parking allow.
+        Skip if we are behind schedule.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Aliyar+Dam+Pollachi/">
+           Aliyar Dam
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">12:15–1:15 PM</td>
+      <td><b>Udumalpet</b></td>
+      <td>
+        Main lunch stop, fuel and washroom.
+        This is our last major town before the forest/hill stretch.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/non+veg+restaurants+Udumalpet/">
+           Non-Veg Lunch
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">1:15–1:45 PM</td>
+      <td><b>Udumalpet Fuel / Check</b></td>
+      <td>
+        Fill fuel if needed, buy water and snacks.
+        Check live route and weather before entering the forest section.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/fuel+stations+Udumalpet/">
+           Fuel
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">2:15–2:45 PM</td>
+      <td><b>Chinnar Wildlife Sanctuary</b></td>
+      <td>
+        Scenic forest drive.
+        Wildlife sightings are possible but not guaranteed.
+        Stop only at permitted safe locations.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Chinnar+Wildlife+Sanctuary/">
+           Chinnar
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">3:00–3:30 PM</td>
+      <td><b>Marayoor Village</b></td>
+      <td>
+        Short village stop.
+        Marayoor is known for sandalwood forests and local jaggery.
+        Buy Marayoor sharkara if available.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Marayoor+Kerala/">
+           Marayoor
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">Optional · 3:30–4:00 PM</td>
+      <td><b>Lakkam Waterfalls</b></td>
+      <td>
+        Quick visit only if access, weather and daylight permit.
+        Do not enter unsafe water or restricted areas.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Lakkam+Waterfalls+Munnar/">
+           Lakkam Falls
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">5:00–6:30 PM</td>
+      <td><b>Munnar Stay</b></td>
+      <td>
+        Check in, park safely and relax.
+        Avoid driving around the hills after dark.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/homestays+parking+Anachal+Munnar/">
+           Stay Area
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="food">
+    <h3>Pollachi & Udumalpet Food Plan 🍗</h3>
+
+    <b>Pollachi option:</b> Arafah Biryani Restaurant.
+
+    <br>
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Arafah+Briyani+Restaurant+Pollachi/">
+       Arafah Biryani
+    </a>
+
+    <p>
+      <b>Pollachi seafood option:</b> Kappitell Restaurant.
+      Try seafood or mutton biryani if available.
+    </p>
+
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Kappitell+Restaurant+Pollachi/">
+       Kappitell
+    </a>
+
+    <p>
+      <b>Udumalpet primary:</b> Sri Annavaasal.
+      Non-veg meals, biryani, chicken, mutton and fish options.
+    </p>
+
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Sri+Annavaasal+Udumalpet/">
+       Sri Annavaasal
+    </a>
+
+    <p>
+      <b>Backup:</b> Rajappa Chettinadu Restaurant.
+      Check the current menu and opening time.
+    </p>
+
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Rajappa+Chettinadu+Restaurant+Udumalpet/">
+       Rajappa Chettinadu
+    </a>
+  </div>
+
+  <div class="food">
+    <h3>Marayoor Local Food 🍛</h3>
+
+    <b>Primary:</b> Sandal Breeze Restaurant.
+
+    <br>
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Sandal+Breeze+Restaurant+Marayoor/">
+       Sandal Breeze
+    </a>
+
+    <p>
+      <b>Local-style option:</b> Chandana Chola Veetile Oonu.
+      Look for Kerala meals, beef curry/roast or fish fry if available.
+    </p>
+
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Chandana+Chola+Veetile+Oonu+Marayoor/">
+       Chandana Chola Oonu
+    </a>
+
+    <p class="small">
+      Don't plan a heavy late lunch in Marayoor if we already ate in Udumalpet.
+      Keep this as a snack or backup stop.
+    </p>
+  </div>
+
+  <a class="map" target="_blank"
+     href="https://www.google.com/maps/dir/Coimbatore/Pollachi/Aliyar+Dam/Udumalpet/Chinnar+Wildlife+Sanctuary/Marayoor/Lakkam+Waterfalls/Munnar/">
+     All Day 3 Locations
+  </a>
 </section>
 
 <!-- DAY 4 -->
+
 <section class="card">
-<h2>Day 4 · Sunday, December 27</h2>
-<p><span class="date">Munnar sightseeing – Eravikulam & town</span></p>
+  <h2>Day 4 · Sunday, December 27</h2>
 
-<table>
-<tr><th>Time</th><th>Place</th><th>Plan</th><th>Maps</th></tr>
-<tr>
-<td class="time">8:00–9:00 AM</td>
-<td>Munnar town</td>
-<td>Breakfast, tea and packed water.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/breakfast+Munnar+town/">Breakfast</a></td>
-</tr>
-<tr>
-<td class="time">9:00 AM–12:00 PM</td>
-<td>Eravikulam National Park / Rajamala</td>
-<td>Visit with valid tickets. Check entry, shuttle and opening rules in advance.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Eravikulam+National+Park+Munnar/">Park</a></td>
-</tr>
-<tr>
-<td class="time">12:15–1:15 PM</td>
-<td>Munnar town lunch</td>
-<td>Kerala meals, biryani or vegetarian thali.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/lunch+restaurants+Munnar+town/">Lunch</a></td>
-</tr>
-<tr>
-<td class="time">1:30–2:30 PM</td>
-<td>Tata Tea Museum</td>
-<td>Check weekly closure and ticket timings before visiting.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Tata+Tea+Museum+Munnar/">Tea Museum</a></td>
-</tr>
-<tr>
-<td class="time">3:00–4:00 PM</td>
-<td>Pothamedu Viewpoint</td>
-<td>Tea estate and valley views. Use designated parking.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Pothamedu+Viewpoint+Munnar/">Viewpoint</a></td>
-</tr>
-<tr>
-<td class="time">4:30–6:00 PM</td>
-<td>Munnar town</td>
-<td>Tea, chocolate shopping and relaxed evening.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Munnar+town+market/">Town</a></td>
-</tr>
-</table>
+  <p>
+    <span class="date">Munnar – National Park, Tea Museum & Viewpoints</span>
+  </p>
 
-<div class="food">
-<b>Must try:</b> Kerala meals, appam-stew, idiyappam, puttu-kadala, cardamom tea and homemade chocolates.
-<a class="map" target="_blank" href="https://www.google.com/maps/search/Kerala+food+restaurants+Munnar/">Food Map</a>
-</div>
+  <p>
+    Relaxed sightseeing day.
+    Keep attraction tickets and opening hours flexible during Christmas week.
+  </p>
+
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Place</th>
+      <th>Plan</th>
+      <th>Maps</th>
+    </tr>
+
+    <tr>
+      <td class="time">8:00–9:00 AM</td>
+      <td><b>Munnar Town Breakfast</b></td>
+      <td>
+        Breakfast, tea and water.
+        Start sightseeing.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/breakfast+Munnar+town/">
+           Breakfast
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">9:00 AM–12:00 PM</td>
+      <td><b>Eravikulam National Park / Rajamala</b></td>
+      <td>
+        Visit with valid tickets.
+        Check park entry, shuttle and operating rules before the trip.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Eravikulam+National+Park+Munnar/">
+           National Park
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">12:15–1:15 PM</td>
+      <td><b>Munnar Town Lunch</b></td>
+      <td>
+        Kerala meals, biryani or non-veg curry meals.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/non+veg+restaurants+Munnar+town/">
+           Non-Veg Lunch
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">1:30–2:30 PM</td>
+      <td><b>Tata Tea Museum</b></td>
+      <td>
+        Tea history and museum visit.
+        Check weekly closure and ticket timings.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Tata+Tea+Museum+Munnar/">
+           Tea Museum
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">3:00–4:00 PM</td>
+      <td><b>Pothamedu Viewpoint</b></td>
+      <td>
+        Tea-estate and valley views.
+        Use designated parking.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Pothamedu+Viewpoint+Munnar/">
+           Viewpoint
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">4:30–6:00 PM</td>
+      <td><b>Munnar Town</b></td>
+      <td>
+        Tea, chocolate shopping and relaxed evening.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Munnar+town+market/">
+           Town Market
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="food">
+    <h3>Munnar Non-Veg Food Picks 🍖</h3>
+
+    <b>Primary:</b> Munnar Samrudhi Restaurant.
+
+    <br>
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Munnar+Samrudhi+Restaurant/">
+       Samrudhi Restaurant
+    </a>
+
+    <p>
+      Kerala fish curry, Malabar parotta, seafood, beef or mutton dishes
+      are worth checking on the menu.
+    </p>
+
+    <b>Backup:</b> Search non-veg restaurants in central Munnar.
+
+    <br>
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/non+veg+restaurants+Munnar+town/">
+       Munnar Non-Veg Backup
+    </a>
+
+    <p>
+      Must try: appam-stew, Kerala parotta, puttu-kadala,
+      idiyappam, fish curry, cardamom tea and homemade chocolates.
+    </p>
+  </div>
 </section>
 
 <!-- DAY 5 -->
+
 <section class="card">
-<h2>Day 5 · Monday, December 28</h2>
-<p><span class="date">Munnar – Mattupetty, Echo Point, Kundala & Top Station</span></p>
+  <h2>Day 5 · Monday, December 28</h2>
 
-<table>
-<tr><th>Time</th><th>Place</th><th>Plan</th><th>Maps</th></tr>
-<tr>
-<td class="time">7:30–8:15 AM</td>
-<td>Munnar breakfast</td>
-<td>Early breakfast and water refill.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/breakfast+Munnar/">Breakfast</a></td>
-</tr>
-<tr>
-<td class="time">8:30–9:30 AM</td>
-<td>Mattupetty Dam</td>
-<td>Viewpoint; boating only if operating and queue is manageable.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Mattupetty+Dam/">Dam</a></td>
-</tr>
-<tr>
-<td class="time">9:45–10:15 AM</td>
-<td>Echo Point</td>
-<td>Scenic stop and photos.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Echo+Point+Munnar/">Echo Point</a></td>
-</tr>
-<tr>
-<td class="time">10:45–11:30 AM</td>
-<td>Kundala Lake</td>
-<td>Lake views; boating depends on availability.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Kundala+Lake+Munnar/">Kundala</a></td>
-</tr>
-<tr>
-<td class="time">12:00–1:00 PM</td>
-<td>Route-side lunch</td>
-<td>Eat at an open restaurant. Keep a flexible lunch option.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/restaurants+Mattupetty+Top+Station+road/">Lunch</a></td>
-</tr>
-<tr>
-<td class="time">1:30–3:00 PM</td>
-<td>Top Station</td>
-<td>Optional furthest stop. Skip if fog, rain, heavy traffic or late.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/Top+Station+Munnar/">Top Station</a></td>
-</tr>
-<tr>
-<td class="time">4:00–5:30 PM</td>
-<td>Tea estate viewpoints</td>
-<td>Photos only at safe pullouts; return to stay before dark.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/tea+plantation+viewpoints+Munnar/">Tea Views</a></td>
-</tr>
-</table>
+  <p>
+    <span class="date">Mattupetty → Echo Point → Kundala → Top Station</span>
+  </p>
 
-<a class="map" target="_blank" href="https://www.google.com/maps/dir/Munnar/Mattupetty+Dam/Echo+Point+Munnar/Kundala+Lake/Top+Station+Munnar/">All Day 5 Stops</a>
+  <p>
+    This is our lake and mountain-view circuit.
+    Start early and skip the furthest stop if fog, rain or traffic delays us.
+  </p>
+
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Place</th>
+      <th>Plan</th>
+      <th>Maps</th>
+    </tr>
+
+    <tr>
+      <td class="time">7:30–8:15 AM</td>
+      <td><b>Munnar Breakfast</b></td>
+      <td>
+        Early breakfast and water refill.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/breakfast+Munnar/">
+           Breakfast
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">8:30–9:30 AM</td>
+      <td><b>Mattupetty Dam</b></td>
+      <td>
+        Dam viewpoint.
+        Boating only if operating and queue is reasonable.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Mattupetty+Dam/">
+           Mattupetty
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">9:45–10:15 AM</td>
+      <td><b>Echo Point</b></td>
+      <td>
+        Scenic stop and photos.
+        Follow parking and crowd-control rules.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Echo+Point+Munnar/">
+           Echo Point
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">10:45–11:30 AM</td>
+      <td><b>Kundala Lake</b></td>
+      <td>
+        Lake views and optional boating if available.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Kundala+Lake+Munnar/">
+           Kundala Lake
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">12:00–1:00 PM</td>
+      <td><b>Route-Side Lunch</b></td>
+      <td>
+        Eat at an open restaurant.
+        Do not depend on one outlet during holiday crowds.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/restaurants+Mattupetty+Top+Station+road/">
+           Lunch Search
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">1:30–3:00 PM</td>
+      <td><b>Top Station</b></td>
+      <td>
+        Optional furthest stop.
+        Skip if fog, rain, heavy traffic or late.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/Top+Station+Munnar/">
+           Top Station
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">4:00–5:30 PM</td>
+      <td><b>Tea Estate Viewpoints</b></td>
+      <td>
+        Photos at safe pullouts.
+        Return to accommodation before dark.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/tea+plantation+viewpoints+Munnar/">
+           Tea Views
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="food">
+    <h3>Food & Tea Stops</h3>
+
+    <b>Mattupetty side:</b> Hotel Maharani Veg & Non Veg
+    is an option for a meal or parotta/pepper chicken-style dishes.
+
+    <br>
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Hotel+Maharani+Veg+Non+Veg+Mattupetty+Munnar/">
+       Maharani Maps
+    </a>
+
+    <p>
+      <b>Tea break:</b> Maxi Cafe near the Mattupetty route
+      for coffee, tea or snacks if open.
+    </p>
+
+    <a class="map" target="_blank"
+       href="https://www.google.com/maps/search/Maxi+Cafe+Mattupetty+Munnar/">
+       Maxi Cafe
+    </a>
+  </div>
+
+  <a class="map" target="_blank"
+     href="https://www.google.com/maps/dir/Munnar/Mattupetty+Dam/Echo+Point+Munnar/Kundala+Lake/Top+Station+Munnar/">
+     All Day 5 Locations
+  </a>
 </section>
 
 <!-- DAY 6 -->
+
 <section class="card">
-<h2>Day 6 · Tuesday, December 29</h2>
-<p><span class="date">Munnar → Bengaluru · Long return drive</span></p>
-<p>Approx. 470–490 km by scenic route. Driving and breaks may take 11–13 hours or longer.</p>
+  <h2>Day 6 · Tuesday, December 29</h2>
 
-<table>
-<tr><th>Time</th><th>Location / Halt</th><th>Plan</th><th>Maps</th></tr>
-<tr>
-<td class="time">4:30–5:00 AM</td>
-<td>Munnar checkout</td>
-<td>Start only if drivers are rested. Check weather and route.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/fuel+stations+Munnar/">Fuel</a></td>
-</tr>
-<tr>
-<td class="time">7:00–7:30 AM</td>
-<td>Marayoor / Udumalpet side</td>
-<td>Short break after descent. No unsafe forest roadside stops.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/breakfast+Marayoor+Udumalpet+road/">Breakfast</a></td>
-</tr>
-<tr>
-<td class="time">9:00–9:45 AM</td>
-<td>Udumalpet / Pollachi</td>
-<td>Breakfast or brunch, fuel and washroom.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/restaurants+fuel+Udumalpet/">Services</a></td>
-</tr>
-<tr>
-<td class="time">11:30 AM–12:15 PM</td>
-<td>Coimbatore bypass</td>
-<td>Lunch and driver change.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/highway+restaurants+Coimbatore+bypass/">Lunch</a></td>
-</tr>
-<tr>
-<td class="time">2:00–2:30 PM</td>
-<td>Salem / Omalur</td>
-<td>Tea, fuel and rest.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/restaurants+Omalur+Salem+NH44/">Halt</a></td>
-</tr>
-<tr>
-<td class="time">4:00–5:00 PM</td>
-<td>Krishnagiri / Shoolagiri</td>
-<td>Refreshment and stretch break.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/highway+restaurants+Shoolagiri/">Food</a></td>
-</tr>
-<tr>
-<td class="time">Approx. 6:00–9:00 PM</td>
-<td>Bengaluru hotel</td>
-<td>Arrival estimate only. Check in and rest overnight.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/hotels+parking+Hosur+Road+Bengaluru/">Hotel Area</a></td>
-</tr>
-</table>
+  <p>
+    <span class="date">Munnar → Bengaluru</span>
+  </p>
 
-<div class="warning danger">
-Do not treat an early departure as compulsory if the driver is tired. A safe arrival matters more than keeping the timetable.
-</div>
+  <p>
+    Long return transit day. The scenic route is roughly 470–490 km
+    depending on accommodation location and chosen roads.
+    With meal stops and traffic, allow a long driving day.
+  </p>
+
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Stop / Location</th>
+      <th>Plan</th>
+      <th>Maps</th>
+    </tr>
+
+    <tr>
+      <td class="time">Early morning</td>
+      <td><b>Munnar Checkout</b></td>
+      <td>
+        Leave only after proper sleep.
+        Check weather and live navigation.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/fuel+stations+Munnar/">
+           Fuel
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">Morning</td>
+      <td><b>Marayoor / Udumalpet</b></td>
+      <td>
+        Short break after the hill descent.
+        Avoid unsafe forest roadside stops.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/breakfast+Marayoor+Udumalpet+road/">
+           Breakfast Search
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">Mid-morning</td>
+      <td><b>Udumalpet / Pollachi</b></td>
+      <td>
+        Breakfast or brunch, fuel and washroom.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/restaurants+fuel+Udumalpet/">
+           Services
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">Lunch time</td>
+      <td><b>Coimbatore Bypass</b></td>
+      <td>
+        Lunch and driver change.
+        Avoid unnecessary city-centre detours.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/non+veg+restaurants+Coimbatore+bypass/">
+           Non-Veg Lunch
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">Afternoon</td>
+      <td><b>Salem / Omalur</b></td>
+      <td>
+        Tea, fuel and proper rest.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/restaurants+Omalur+Salem+NH44/">
+           Halt
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">Evening</td>
+      <td><b>Krishnagiri / Shoolagiri</b></td>
+      <td>
+        Refreshment and stretch break.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/highway+restaurants+Shoolagiri/">
+           Food Halt
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="time">Evening / Night</td>
+      <td><b>Bengaluru Hotel</b></td>
+      <td>
+        Arrival estimate depends on traffic and breaks.
+        Check in and rest overnight.
+      </td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/hotels+parking+Hosur+Road+Bengaluru/">
+           Hotel Area
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="warning danger">
+    Don't treat an early departure as compulsory if the driver is tired.
+    The safety of the group is more important than maintaining a timetable.
+  </div>
 </section>
 
 <!-- DAY 7 -->
+
 <section class="card">
-<h2>Day 7 · Wednesday, December 30</h2>
-<p><span class="date">Bengaluru → Hyderabad</span></p>
+  <h2>Day 7 · Wednesday, December 30</h2>
 
-<div class="warning danger">
-<b>Return deadline warning:</b> Hyderabad by 12:30 PM is not a safe realistic target from Bengaluru after the previous day's long drive. The drive can take 9–12+ hours with breaks and traffic. Recommended: return in the evening after proper rest, or extend the trip to Dec 31. Do not speed or drive without sleep.
-</div>
+  <p>
+    <span class="date">Bengaluru → Hyderabad</span>
+  </p>
 
-<table>
-<tr><th>Route halt</th><th>Plan</th><th>Maps</th></tr>
-<tr>
-<td>Bengaluru → Hosur</td>
-<td>Start after proper sleep; fuel and breakfast.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/dir/Bengaluru/Hosur/">Route</a></td>
-</tr>
-<tr>
-<td>Krishnagiri / Dharmapuri</td>
-<td>Rest stop and driver swap.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/rest+stops+Krishnagiri+NH44/">Halt</a></td>
-</tr>
-<tr>
-<td>Anantapur</td>
-<td>Meal, tea and stretch.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/family+restaurants+Anantapur+NH44/">Food</a></td>
-</tr>
-<tr>
-<td>Kurnool bypass</td>
-<td>Fuel, restroom and rest.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/search/fuel+restaurants+Kurnool+bypass/">Halt</a></td>
-</tr>
-<tr>
-<td>Hyderabad</td>
-<td>Final destination.</td>
-<td><a class="map" target="_blank" href="https://www.google.com/maps/dir/Bengaluru/Hyderabad/">Full Route</a></td>
-</tr>
-</table>
+  <div class="warning danger">
+    <b>Important:</b>
+    The requested Hyderabad arrival by 12:30 PM is not a realistic
+    safe target from Bengaluru after the previous day's long drive.
+    The journey can take 9–12+ hours with breaks and traffic.
+
+    <p>
+      Recommended: return in the evening after proper rest,
+      or extend the trip to December 31.
+      Do not speed or drive without sleep.
+    </p>
+  </div>
+
+  <table>
+    <tr>
+      <th>Route Stop</th>
+      <th>Plan</th>
+      <th>Maps</th>
+    </tr>
+
+    <tr>
+      <td><b>Bengaluru → Hosur</b></td>
+      <td>Start after proper sleep. Fuel and breakfast.</td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/dir/Bengaluru/Hosur/">
+           Route
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td><b>Krishnagiri / Dharmapuri</b></td>
+      <td>Rest stop and driver swap.</td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/rest+stops+Krishnagiri+NH44/">
+           Halt
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td><b>Anantapur</b></td>
+      <td>Meal, tea and stretch.</td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/family+restaurants+Anantapur+NH44/">
+           Food
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td><b>Kurnool Bypass</b></td>
+      <td>Fuel, restroom and rest.</td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/search/fuel+restaurants+Kurnool+bypass/">
+           Halt
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td><b>Hyderabad</b></td>
+      <td>Final destination.</td>
+      <td>
+        <a class="map" target="_blank"
+           href="https://www.google.com/maps/dir/Bengaluru/Hyderabad/">
+           Full Route
+        </a>
+      </td>
+    </tr>
+  </table>
 </section>
 
+<!-- BUDGET -->
+
 <section class="card">
-<h2>Budget Estimate – 5 Friends</h2>
+  <h2>Trip Budget – 5 Friends</h2>
 
-<table>
-<tr><th>Expense</th><th>Estimated Group Cost</th></tr>
-<tr><td>Fuel / vehicle running</td><td>₹15,500–₹19,000</td></tr>
-<tr><td>Tolls and parking</td><td>₹4,500–₹6,500</td></tr>
-<tr><td>Accommodation</td><td>₹25,000–₹45,000</td></tr>
-<tr><td>Food</td><td>₹15,000–₹20,000</td></tr>
-<tr><td>Tickets and activities</td><td>₹5,000–₹9,000</td></tr>
-<tr><td>Miscellaneous</td><td>₹4,000–₹6,000</td></tr>
-<tr><th>Total approximate</th><th>₹69,000–₹1,05,500</th></tr>
-</table>
+  <table>
+    <tr>
+      <th>Expense</th>
+      <th>Estimated Group Cost</th>
+    </tr>
 
-<p><b>Per person:</b> approximately ₹13,800–₹21,100.</p>
-<p class="small">Christmas week hotel rates may be higher. Confirm availability, parking, room capacity and cancellation policy before booking.</p>
+    <tr>
+      <td>Fuel / vehicle running</td>
+      <td>₹15,500–₹19,000</td>
+    </tr>
+
+    <tr>
+      <td>Tolls and parking</td>
+      <td>₹4,500–₹6,500</td>
+    </tr>
+
+    <tr>
+      <td>Accommodation</td>
+      <td>₹25,000–₹45,000</td>
+    </tr>
+
+    <tr>
+      <td>Food</td>
+      <td>₹15,000–₹20,000</td>
+    </tr>
+
+    <tr>
+      <td>Tickets and activities</td>
+      <td>₹5,000–₹9,000</td>
+    </tr>
+
+    <tr>
+      <td>Miscellaneous</td>
+      <td>₹4,000–₹6,000</td>
+    </tr>
+
+    <tr>
+      <th>Total Approximate</th>
+      <th>₹69,000–₹1,05,500</th>
+    </tr>
+  </table>
+
+  <p>
+    <b>Per person:</b> approximately ₹13,800–₹21,100.
+  </p>
+
+  <p class="small">
+    Christmas-week accommodation and restaurant prices may be higher.
+    Confirm hotel availability, parking, room capacity and cancellation
+    policy before booking.
+  </p>
 </section>
 
-<section class="card">
-<h2>Final Checklist</h2>
-<div class="grid">
-<div class="spot">
-<h3>Vehicle</h3>
-<p>☐ FASTag balance</p>
-<p>☐ Tyres and spare wheel</p>
-<p>☐ Jack and puncture kit</p>
-<p>☐ RC, insurance, PUC and licence</p>
-<p>☐ Fuel and service check</p>
-</div>
-<div class="spot">
-<h3>Trip</h3>
-<p>☐ Hotels confirmed for 5 people</p>
-<p>☐ Offline Google Maps downloaded</p>
-<p>☐ Driver rotation and sleep plan</p>
-<p>☐ Water and first-aid kit</p>
-<p>☐ Attraction timings checked</p>
-<p>☐ Forest/ghat weather checked</p>
-</div>
-</div>
+<!-- CHECKLIST -->
 
-<p class="small">Google Maps links open route or location searches. Tap Directions for live navigation. Restaurants and attraction timings can change; verify before visiting. Use permitted parking only and follow forest-area rules.</p>
+<section class="card">
+  <h2>Final Road Trip Checklist</h2>
+
+  <div class="grid">
+    <div class="spot">
+      <h3>Vehicle</h3>
+      <p class="checklist">
+        ☐ FASTag balance<br>
+        ☐ Tyres and spare wheel<br>
+        ☐ Jack and puncture kit<br>
+        ☐ RC, insurance, PUC and licence<br>
+        ☐ Fuel and service check<br>
+        ☐ Phone charger and power bank
+      </p>
+    </div>
+
+    <div class="spot">
+      <h3>Trip</h3>
+      <p class="checklist">
+        ☐ Hotels confirmed for 5 people<br>
+        ☐ Offline Google Maps downloaded<br>
+        ☐ Driver rotation and sleep plan<br>
+        ☐ Water and first-aid kit<br>
+        ☐ Attraction timings checked<br>
+        ☐ Forest / ghat weather checked<br>
+        ☐ Cash for parking and small shops
+      </p>
+    </div>
+
+    <div class="spot">
+      <h3>Food</h3>
+      <p class="checklist">
+        ☐ Water bottles<br>
+        ☐ Light snacks<br>
+        ☐ Restaurant backup links saved<br>
+        ☐ Check kitchen hours<br>
+        ☐ Keep meal breaks flexible
+      </p>
+    </div>
+  </div>
+
+  <p class="small">
+    Google Maps links open route or location searches.
+    Tap Directions for live navigation.
+    Restaurant availability and attraction timings can change.
+    Use permitted parking only and follow forest-area rules.
+  </p>
 </section>
 
 <footer>
-<h2 style="color:white">Safe Journey, Mawa! ❤️</h2>
-<p>Christmas 2026 · Munnar-only destination · Friends Road Trip</p>
-<p>Drive safe, eat well and make beautiful memories.</p>
+  <h2 style="color:white">Safe Journey, Mawa! ❤️</h2>
+  <p>Christmas 2026 · Munnar-only destination · 5 Friends</p>
+  <p>Drive safe, enjoy the food and make beautiful memories.</p>
 </footer>
 
 </main>
