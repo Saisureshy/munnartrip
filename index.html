@@ -7,222 +7,72 @@
 <title>Abhi's Tata Safari | Munnar Trip 2026</title>
 
 <style>
+
 :root {
-  --green: #174e38;
-  --lightgreen: #eaf4ec;
-  --orange: #d97706;
-  --dark: #25352b;
-  --muted: #65756a;
-  --border: #dce7df;
+  --forest:#164b36; --forest-2:#246b4b; --mint:#eaf4ee;
+  --cream:#fffaf1; --ink:#203129; --muted:#64746b;
+  --line:#dce7df; --gold:#d99a2b; --danger:#a63f36;
+  --surface:#fff; --page:#f3f7f4; --shadow:0 12px 32px rgba(24,61,42,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font:16px/1.72 Inter,Segoe UI,Arial,sans-serif;background:var(--page);color:var(--ink)}
+header{position:relative;overflow:hidden;background:linear-gradient(130deg,#0d3526 0%,#1e6042 55%,#4b9167 100%);color:#fff;padding:clamp(36px,7vw,76px) 18px;text-align:center}
+header:after{content:"";position:absolute;width:360px;height:360px;border:1px solid #ffffff22;border-radius:50%;right:-130px;top:-170px;box-shadow:0 0 0 35px #ffffff0a,0 0 0 75px #ffffff08}
+header h1{font-size:clamp(30px,5vw,54px);line-height:1.15;letter-spacing:-.04em;margin:0 0 14px}
+header p{margin:7px 0;color:#f1f8f3}
+.badge{display:inline-flex;align-items:center;padding:7px 13px;margin:7px 4px 0;border:1px solid #ffffff55;background:#ffffff12;border-radius:99px;font-size:13px;font-weight:700}
+.day-nav{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:7px;justify-content:center;background:#ffffffed;backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:14px;padding:10px;margin:0 0 20px;box-shadow:0 5px 18px #0000000a}
+.day-nav a{color:var(--forest);background:var(--mint);text-decoration:none;font-size:12px;font-weight:800;padding:7px 11px;border-radius:8px}
+.day-nav a:hover{background:#d4e8db}
+main{max-width:1120px;margin:0 auto;padding:22px clamp(12px,3vw,28px) 44px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(18px,3vw,30px);margin:22px 0;box-shadow:var(--shadow)}
+h2{color:var(--forest);font-size:clamp(22px,3vw,30px);line-height:1.25;margin:0 0 16px;letter-spacing:-.025em}
+h3{color:var(--forest-2);font-size:19px;margin:0 0 10px}
+h4{margin:0 0 7px}
+p{margin:12px 0}
+.day{border-top:1px solid var(--line);padding-top:24px;margin-top:26px}
+.day:first-of-type{border-top:0}
+.date{display:inline-flex;background:var(--mint);color:var(--forest);padding:7px 13px;border-radius:9px;font-weight:800;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.spot{background:#fbfdfb;border:1px solid var(--line);border-radius:14px;padding:17px}
+.spot h3{margin-top:0}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:18px 0;font-size:14px;overflow:hidden;border:1px solid var(--line);border-radius:12px}
+th,td{border-bottom:1px solid var(--line);padding:13px 14px;text-align:left;vertical-align:top}
+th{background:#eaf3ed;color:var(--forest);font-size:12px;text-transform:uppercase;letter-spacing:.055em}
+tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:#fbfdfb}
+.time{font-weight:800;color:var(--forest);white-space:nowrap}
+.map{display:inline-flex;align-items:center;justify-content:center;background:var(--forest);color:white!important;text-decoration:none;padding:9px 13px;border-radius:9px;margin:3px 2px;font-size:12px;font-weight:800;transition:transform .15s,background .15s}
+.map:hover{background:#2d8058;transform:translateY(-1px)}
+.food{background:var(--cream);border:1px solid #efdfbf;border-radius:14px;padding:18px;margin:16px 0}
+.warning{background:#fff5df;border:1px solid #f1d69b;border-left:5px solid var(--gold);border-radius:12px;padding:17px 19px;margin:16px 0}
+.danger{background:#fff1ef;border-color:#f0c5c0;border-left-color:var(--danger)}
+.step{display:flex;gap:12px;align-items:flex-start;background:var(--mint);border:1px solid #d6e8db;border-radius:12px;padding:14px 16px;margin:10px 0}
+.small{font-size:13px;color:var(--muted)}
+.checklist{line-height:2.1}
+footer{background:linear-gradient(130deg,#123d2b,#276c49);color:white;text-align:center;padding:32px 20px;border-radius:18px;margin-top:28px}
+footer h2{color:white}
+footer p{color:#e8f3eb}
+a{overflow-wrap:anywhere}
+@media(max-width:760px){
+  main{padding:10px 10px 30px}
+  .card{padding:17px;border-radius:15px;margin:14px 0}
+  table{display:block;overflow-x:auto;white-space:normal}
+  th,td{padding:10px;font-size:12px}
+  .time{white-space:normal;min-width:92px}
+  .map{padding:8px 10px}
+  .step{padding:12px}
+}
+@media print{
+  body{background:white;font-size:11pt}
+  header{padding:22px;background:#174e38!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  main{max-width:none;padding:0}
+  .card{box-shadow:none;break-inside:avoid;border:1px solid #ccc;margin:12px 0}
+  .map{color:#174e38!important;background:white;border:1px solid #174e38}
+  a[href]:after{content:""}
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f2f6f2;
-  color: var(--dark);
-  line-height: 1.65;
-}
-
-header {
-  background: linear-gradient(135deg, #103c2b, #43885d);
-  color: white;
-  padding: 38px 18px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: clamp(28px, 5vw, 44px);
-  margin: 0;
-}
-
-header p {
-  margin: 7px 0;
-}
-
-.badge {
-  display: inline-block;
-  padding: 5px 12px;
-  margin: 4px;
-  border: 1px solid #ffffff70;
-  border-radius: 30px;
-  font-size: 14px;
-}
-
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 16px;
-}
-
-.card {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 22px;
-  margin: 20px 0;
-  box-shadow: 0 5px 18px #0000000a;
-}
-
-h2 {
-  color: var(--green);
-  margin-top: 0;
-}
-
-h3 {
-  color: #28764c;
-}
-
-h4 {
-  margin-bottom: 5px;
-}
-
-.day {
-  border-top: 2px solid var(--border);
-  padding-top: 20px;
-  margin-top: 22px;
-}
-
-.day:first-of-type {
-  border-top: 0;
-}
-
-.date {
-  display: inline-block;
-  background: var(--lightgreen);
-  color: var(--green);
-  padding: 5px 11px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-}
-
-.spot {
-  background: #fbfdfb;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 15px;
-}
-
-.spot h3 {
-  margin-top: 0;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 14px 0;
-  font-size: 14px;
-}
-
-th, td {
-  border-bottom: 1px solid var(--border);
-  padding: 11px;
-  text-align: left;
-  vertical-align: top;
-}
-
-th {
-  background: var(--lightgreen);
-  color: var(--green);
-}
-
-.time {
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.map {
-  display: inline-block;
-  background: var(--green);
-  color: white !important;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  margin: 4px 2px;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.map:hover {
-  background: #31865a;
-}
-
-.food {
-  background: #fff9ed;
-  border: 1px solid #f0dfbd;
-  border-radius: 11px;
-  padding: 15px;
-  margin: 13px 0;
-}
-
-.warning {
-  background: #fff2d9;
-  border-left: 5px solid #e0a22c;
-  border-radius: 9px;
-  padding: 16px;
-  margin: 15px 0;
-}
-
-.danger {
-  background: #fff0ef;
-  border-left-color: #b5443c;
-}
-
-.step {
-  background: #eaf4ec;
-  border-radius: 10px;
-  padding: 13px;
-  margin: 12px 0;
-}
-
-.small {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.checklist {
-  line-height: 2.1;
-}
-
-footer {
-  background: var(--green);
-  color: white;
-  text-align: center;
-  padding: 25px;
-  border-radius: 14px;
-}
-
-@media(max-width:650px) {
-  main {
-    padding: 8px;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  table {
-    font-size: 12px;
-  }
-
-  th, td {
-    padding: 7px;
-  }
-
-  .time {
-    white-space: normal;
-  }
-}
 </style>
 </head>
 
@@ -240,6 +90,12 @@ footer {
 </header>
 
 <main>
+
+<nav class="day-nav" aria-label="Trip day navigation">
+  <a href="#day1">Day 1</a><a href="#day2">Day 2</a><a href="#day3">Day 3</a>
+  <a href="#day4">Day 4</a><a href="#day5">Day 5</a><a href="#day6">Day 6</a>
+  <a href="#day7">Day 7</a><a href="#budget">Budget</a><a href="#checklist">Checklist</a>
+</nav>
 
 <!-- TRIP SUMMARY -->
 
@@ -342,7 +198,7 @@ footer {
 <!-- DAY 1 -->
 
 <section class="card">
-  <h2>Day 1 · Thursday, December 24</h2>
+  <h2 id="day1">Day 1 · Thursday, December 24</h2>
   <p>
     <span class="date">Hyderabad → Bengaluru</span>
   </p>
@@ -455,7 +311,7 @@ footer {
 <!-- DAY 2 -->
 
 <section class="card">
-  <h2>Day 2 · Friday, December 25</h2>
+  <h2 id="day2">Day 2 · Friday, December 25</h2>
 
   <p>
     <span class="date">Bengaluru → Coimbatore</span>
@@ -610,7 +466,7 @@ footer {
 <!-- DAY 3 -->
 
 <section class="card">
-  <h2>Day 3 · Saturday, December 26</h2>
+  <h2 id="day3">Day 3 · Saturday, December 26</h2>
 
   <p>
     <span class="date">Coimbatore → Pollachi → Aliyar → Udumalpet → Chinnar → Marayoor → Munnar</span>
@@ -870,7 +726,7 @@ footer {
 <!-- DAY 4 -->
 
 <section class="card">
-  <h2>Day 4 · Sunday, December 27</h2>
+  <h2 id="day4">Day 4 · Sunday, December 27</h2>
 
   <p>
     <span class="date">Munnar – National Park, Tea Museum & Viewpoints</span>
@@ -1012,7 +868,7 @@ footer {
 <!-- DAY 5 -->
 
 <section class="card">
-  <h2>Day 5 · Monday, December 28</h2>
+  <h2 id="day5">Day 5 · Monday, December 28</h2>
 
   <p>
     <span class="date">Mattupetty → Echo Point → Kundala → Top Station</span>
@@ -1167,7 +1023,7 @@ footer {
 <!-- DAY 6 -->
 
 <section class="card">
-  <h2>Day 6 · Tuesday, December 29</h2>
+  <h2 id="day6">Day 6 · Tuesday, December 29</h2>
 
   <p>
     <span class="date">Munnar → Bengaluru</span>
@@ -1299,7 +1155,7 @@ footer {
 <!-- DAY 7 -->
 
 <section class="card">
-  <h2>Day 7 · Wednesday, December 30</h2>
+  <h2 id="day7">Day 7 · Wednesday, December 30</h2>
 
   <p>
     <span class="date">Bengaluru → Hyderabad</span>
@@ -1385,7 +1241,7 @@ footer {
 <!-- BUDGET -->
 
 <section class="card">
-  <h2>Trip Budget – 5 Friends</h2>
+  <h2 id="budget">Trip Budget – 5 Friends</h2>
 
   <table>
     <tr>
@@ -1443,7 +1299,7 @@ footer {
 <!-- CHECKLIST -->
 
 <section class="card">
-  <h2>Final Road Trip Checklist</h2>
+  <h2 id="checklist">Final Road Trip Checklist</h2>
 
   <div class="grid">
     <div class="spot">
