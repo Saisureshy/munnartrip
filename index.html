@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> Munnar & Alleppey Trip 2026</title>
+<title>Munnar & Alleppey Trip 2026</title>
 
 <style>
 
@@ -222,6 +222,65 @@ main{max-width:1240px;padding:26px clamp(12px,3.2vw,38px) 64px}
  .day-nav{border-radius:18px!important}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.day-nav a,.card .spot{transition:none}}
+</style>
+
+<style id="mobile-first-trip-layout">
+/* Mobile-first refinements for phones and small tablets */
+*,*::before,*::after{box-sizing:border-box}
+html{width:100%;overflow-x:hidden}
+body{width:100%;min-width:0;overflow-x:hidden}
+img,svg,video{max-width:100%}
+header.cinematic-hero{width:100%;overflow:hidden}
+header.cinematic-hero .cinematic-hero-image{
+  width:100%;height:auto;display:block;object-fit:contain;
+}
+/* Keep all navigation controls usable without squeezing labels */
+.day-nav{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:7px!important;
+  padding:9px!important;
+  width:100%;
+}
+.day-nav a{
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;min-width:0;white-space:normal;
+  padding:10px 5px!important;font-size:clamp(10px,2.7vw,13px)!important;
+  line-height:1.2;border-radius:10px!important;
+}
+main{width:100%;min-width:0}
+.card{min-width:0;overflow-wrap:anywhere}
+.grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.spot,.food,.warning,.map,.checklist{max-width:100%;overflow-wrap:anywhere}
+.card table{
+  display:block;width:100%;max-width:100%;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;white-space:normal;
+}
+.card table th,.card table td{min-width:105px;padding:10px 9px;font-size:12px}
+.card table .time{white-space:normal}
+.map{white-space:normal;max-width:100%}
+@media(max-width:480px){
+  body{font-size:15px;line-height:1.55;background-attachment:scroll}
+  main{padding:10px 9px 30px!important}
+  .card{padding:15px!important;margin:13px 0!important;border-radius:17px!important}
+  h1{font-size:clamp(23px,7vw,34px);line-height:1.15}
+  h2{font-size:clamp(20px,5.8vw,26px);line-height:1.25}
+  h3{font-size:17px;line-height:1.3}
+  p,li{overflow-wrap:anywhere}
+  .day{padding-top:17px;margin-top:19px}
+  .date{font-size:12px;padding:6px 10px}
+  .day-nav{top:0;border-radius:13px!important;margin-bottom:14px!important}
+  .day-nav a{min-height:38px}
+  .hero-road{height:120px!important}
+  .hero-convoy{max-width:48%}
+  .hero-road-print{white-space:normal;letter-spacing:.025em!important}
+  .hero-road-print span{max-width:95%;white-space:normal}
+}
+@media(min-width:481px) and (max-width:760px){
+  main{padding:16px 14px 38px}
+  .card{padding:19px!important}
+  .day-nav{grid-template-columns:repeat(5,minmax(0,1fr))}
+}
 </style>
 </head>
 
